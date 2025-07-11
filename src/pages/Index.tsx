@@ -27,13 +27,13 @@ const Index = () => {
     {
       title: "Prompt2Plugin – AI-Powered Chrome Extension & Workflow Generator",
       description: "Developed a tool that converts natural language prompts into fully functional Chrome extensions and n8n automation workflows. Simplifies development by generating code, logic, and structure directly from user intent.",
-      technologies: "React, Node.js, AI/ML, Chrome APIs",
+      technologies: "React, Node.js, AI/ML, LLMs, APIs",
       link: "https://github.com/aryy8/prompt2plugin-ai"
     },
     {
       title: "SilverCircle – Social Networking Platform for Seniors",
       description: "Designed a user-friendly social platform for elderly users with features like voice-enabled chat, hobby circles, memory lane (VR experience), and simple games. Built using React, Supabase, and Tailwind CSS, with a focus on accessibility, design, and secure login.",
-      technologies: "React, Supabase, Tailwind CSS, VR",
+      technologies: "React, Supabase, Tailwind CSS",
       link: "https://github.com/aryy8/silvercircle.in"
     },
     {
@@ -44,9 +44,15 @@ const Index = () => {
     },
     {
       title: "Yolov8: Real-time Weapon Detection",
-      description: "Implemented a real-time weapon detection system using YOLOv8 on a Hugging Face dataset, trained and evaluated via Google Colab.",
-      technologies: "YOLOv8, Python, Google Colab",
+      description: "Implemented a real-time weapon detection system using YOLOv8 on a Hugging Face dataset, trained and evaluated via OpenCV",
+      technologies: "YOLOv8, Python, Roboflow, OpenCV",
       link: "https://github.com/aryy8/weapon-detection-model"
+    },
+    {
+      title: "AI agent: Kaggle notebook generator",
+      description: "AI-agent to code executable kaggle notebooks locally from bash with NLP.",
+      technologies: "Python, LLM, APIs",
+      link: "https://github.com/aryy8/kaggle_ai_agent"
     },
     {
       title: "Fine tuning: DistilBERT Enhancement",
@@ -69,17 +75,21 @@ const Index = () => {
   ];
 
   const experiences = [
-    { company: "Superteam", role: "Contributor" },
-    { company: "Elumina Street Solutions", role: "AI Research & Development Intern" },
-    { company: "AI2 Research lab", role: "Research Intern" },
-    { company: "GSSOC-2024", role: "Contributor" }
+    { company: "IEEE RAS", role: "Head of AIML (May 2025-Present)" },
+    { company: "Elumina Street Solutions", role: "AI Research & Development Intern (April 2025-July 2025)" },
+    { company: "AI2 Research lab", role: "Research Intern (Jan 2025-Present)" },
+    { company: "180 DC MUJ", role: "Joint Head R&D (May 2025-Present)" },
+    { company: "Superteam", role: "Contributor (April 2025-Present)" },
+    { company: "GSSOC-2024", role: "Contributor (Oct 2024-Nov 2024)" }
   ];
 
   const certifications = [
-    { name: "Gen AI with LLMs", issuer: "Deeplearning.ai" },
-    { name: "Finetuning LLMs", issuer: "Deeplearning.ai" },
-    { name: "ML specs Stanford University", issuer: "Deeplearning.ai" },
-    { name: "Postman", issuer: "Certified in API development and testing." }
+    { name: "AI Agents Fundamentals", issuer: "Hugging Face", url: "https://huggingface.co/datasets/agents-course/certificates/resolve/main/certificates/aryanrastogi17/2025-02-13.png" },
+    { name: "Gen AI with LLMs", issuer: "Deeplearning.ai", url: "https://coursera.org/share/338f518aff1eaa9d2336126a8ff16d9b" },
+    { name: "Finetuning LLMs", issuer: "Deeplearning.ai", url: "https://learn.deeplearning.ai/accomplishments/f8c671c4-6c34-4c26-b00a-45d512ac5c7a?usp=sharing" },
+    { name: "ML specialization", issuer: "Deeplearning.ai", url: "https://www.coursera.org/account/accomplishments/verify/ZU290TWNVU7Z" },
+    { name: "Intro to ML", issuer: "Kaggle", url: "https://www.kaggle.com/learn/certification/aryanrastogi17/intro-to-machine-learning" },
+    { name: "Postman", issuer: "Certified in API development and testing.", url: "https://api.badgr.io/public/assertions/RQHIgwJVTLyIhfu7kE6o0w" }
   ];
 
   return (
@@ -135,6 +145,7 @@ const Index = () => {
                   key={index}
                   name={cert.name}
                   issuer={cert.issuer}
+                  url={cert.url}
                 />
               ))}
             </div>
