@@ -1,23 +1,28 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [displayText, setDisplayText] = useState('');
   const fullText = 'ARYAN RASTOGI';
-  
+  const frame = useRef(0);
+
   useEffect(() => {
     let currentIndex = 0;
-    const interval = setInterval(() => {
+    let lastTime = performance.now();
+
+    function type(now: number) {
       if (currentIndex <= fullText.length) {
-        setDisplayText(fullText.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        clearInterval(interval);
+        if (now - lastTime > 50) { // 50ms per character
+          setDisplayText(fullText.slice(0, currentIndex));
+          currentIndex++;
+          lastTime = now;
+        }
+        frame.current = requestAnimationFrame(type);
       }
-    }, 150);
-    
-    return () => clearInterval(interval);
+    }
+    frame.current = requestAnimationFrame(type);
+    return () => cancelAnimationFrame(frame.current);
   }, []);
 
   return (
