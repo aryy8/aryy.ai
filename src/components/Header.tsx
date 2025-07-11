@@ -32,12 +32,12 @@ const Header: React.FC = () => {
           Mail
         </a>
         <span className="text-gray-400">|</span>
-        <a href="#" className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:scale-110 transform font-sans">
+        <a href="https://www.linkedin.com/in/aryy8" className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:scale-110 transform font-sans">
           <Linkedin size={20} />
           LinkedIn
         </a>
         <span className="text-gray-400">|</span>
-        <a href="#" className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:scale-110 transform font-sans">
+        <a href="https://github.com/aryy8" className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:scale-110 transform font-sans">
           <Github size={20} />
           Github
         </a>
