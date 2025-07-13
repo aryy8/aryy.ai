@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 import DarkModeToggle from '../components/DarkModeToggle';
 import Header from '../components/Header';
 import Section from '../components/Section';
