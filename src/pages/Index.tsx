@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from "@vercel/analytics/next";
 import DarkModeToggle from '../components/DarkModeToggle';
 import Header from '../components/Header';
 import Section from '../components/Section';
@@ -152,6 +153,7 @@ const Index = () => {
           </Section>
         </div>
       </div>
+      <Analytics />
     </div>
   );
 };
