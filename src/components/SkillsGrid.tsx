@@ -5,7 +5,7 @@ const SkillsGrid: React.FC = () => {
   const skills = [
     {
       category: "Programming",
-      items: "Python, C, C++, JavaScript"
+      items: "Python, C, C++, JavaScript, TypeScript"
     },
     {
       category: "Web Development",
@@ -13,11 +13,11 @@ const SkillsGrid: React.FC = () => {
     },
     {
       category: "Machine Learning & AI",
-      items: "TensorFlow, PyTorch, Scikit-learn, Hugging Face Transformers, OpenCV, YOLO Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebooks, Google Colab, Kaggle"
+      items: "TensorFlow, PyTorch, Scikit-learn, Hugging Face Transformers, OpenCV, YOLO Pandas, NumPy, Matplotlib, Jupyter Notebooks, Google Colab, Kaggle"
     },
     {
       category: "Tools & Platforms",
-      items: "Git, GitHub, Postman, Firebase, n8n, Figma"
+      items: "Git, GitHub, Postman, Firebase, n8n, Figma, Canva"
     }
   ];
 

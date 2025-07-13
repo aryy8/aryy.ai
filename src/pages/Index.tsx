@@ -43,19 +43,19 @@ const Index = () => {
       link: "https://github.com/aryy8/violence-detection-model"
     },
     {
-      title: "Yolov8: Real-time Weapon Detection",
-      description: "Implemented a real-time weapon detection system using YOLOv8 on a Hugging Face dataset, trained and evaluated via OpenCV",
+      title: "Real-time Weapon Detection Model",
+      description: "Implemented a real-time weapon detection system using YOLOv8, trained on a Hugging Face dataset, evaluated via OpenCV",
       technologies: "YOLOv8, Python, Roboflow, OpenCV",
       link: "https://github.com/aryy8/weapon-detection-model"
     },
     {
-      title: "AI agent: Kaggle notebook generator",
+      title: "AI agent - Kaggle notebook generator",
       description: "AI-agent to code executable kaggle notebooks locally from bash with NLP.",
       technologies: "Python, LLM, APIs",
       link: "https://github.com/aryy8/kaggle_ai_agent"
     },
     {
-      title: "Fine tuning: DistilBERT Enhancement",
+      title: "Fine tuning -  DistilBERT Enhancement",
       description: "Fine-tuned a small LLM 'distilBert' using teslaP100 GPU on emotion-sentiment dataset to enhance its ability to predict emotional sentiment in text.",
       technologies: "DistilBERT, Python, GPU Computing",
       link: "https://github.com/aryy8/finetune_ai2"
