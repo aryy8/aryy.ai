@@ -7,9 +7,12 @@ interface ProjectCardProps {
   description: string;
   technologies?: string;
   link?: string;
+  image?: string;
+  darkImage?: string;
+  isDark?: boolean;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, technologies, link }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, technologies, link, image, darkImage, isDark }) => {
   const handleClick = () => {
     if (link) {
       window.open(link, '_blank');
@@ -18,13 +21,40 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, technolog
     }
   };
 
+  // Choose the correct image based on dark mode
+  const displayImage = isDark && darkImage ? darkImage : image;
+
   return (
     <div 
       onClick={handleClick}
-      className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-teal-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-teal-500/20 transform hover:-translate-y-3 hover:scale-105 cursor-pointer"
+      className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-teal-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-teal-500/20 transform hover:-translate-y-3 hover:scale-105 cursor-pointer overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-      <div className="relative z-10">
+      <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+      {/* Image overlay appears only on hover for selected projects */}
+      {displayImage && ![
+        'AI agent - Kaggle notebook generator',
+        'Fine tuning -  DistilBERT Enhancement',
+        'Titanic Dataset Machine Learning Classification',
+        'AryyGPT - AI Chatbot using Llama 3.2 and Ollama'
+      ].includes(title) && (
+        <div className={`absolute inset-0 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center ${(title.startsWith('GeoVerse') || title.startsWith('Violence Detection Model')) ? 'bg-white dark:bg-black' : ''}`}>
+          <img
+            src={displayImage}
+            alt={title}
+            className={
+              (title.startsWith('GeoVerse') || title.startsWith('Violence Detection Model'))
+                ? 'max-w-full max-h-full object-contain rounded-2xl'
+                : 'w-full h-full object-cover rounded-2xl'
+            }
+          />
+        </div>
+      )}
+      <div className={`relative z-10 group-hover:opacity-100 transition-all duration-500 ${displayImage && ![
+        'AI agent - Kaggle notebook generator',
+        'Fine tuning -  DistilBERT Enhancement',
+        'Titanic Dataset Machine Learning Classification',
+        'AryyGPT - AI Chatbot using Llama 3.2 and Ollama'
+      ].includes(title) ? 'group-hover:invisible' : ''}`}>
         <div className="flex justify-between items-start mb-3">
           <h4 className="text-xl font-bold text-gray-800 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors duration-300">
             {title}

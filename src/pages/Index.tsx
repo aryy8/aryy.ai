@@ -26,28 +26,52 @@ const Index = () => {
 
   const projects = [
     {
+      title: "GeoVerse – Information Retrieval platform from a Knowledge Graph Based on Dynamic Web Portal Content",
+      description: "GeoVerse is an AI-powered conversational assistant that transforms complex satellite data from the MOSDAC portal into instant, contextual answers using NLP , knowledge graphs, and semantic search.",
+      technologies: "Neo4j, FastAPI, Langchain, Transformers, React, Node.js, AI/ML, LLMs",
+      link: "https://github.com/Swasti1804/geoverse-ai",
+      image: "/GeoVerse.png",
+      darkImage: "/geoverse_dark.jpeg"
+    },
+    {
       title: "Prompt2Plugin – AI-Powered Chrome Extension & Workflow Generator",
       description: "Developed a tool that converts natural language prompts into fully functional Chrome extensions and n8n automation workflows. Simplifies development by generating code, logic, and structure directly from user intent.",
       technologies: "React, Node.js, AI/ML, LLMs, APIs",
-      link: "https://github.com/aryy8/prompt2plugin-ai"
+      link: "https://github.com/aryy8/prompt2plugin-ai",
+      image: "/p2p.png",
+      darkImage: "/p2p_dark.png"
     },
     {
       title: "SilverCircle – Social Networking Platform for Seniors",
       description: "Designed a user-friendly social platform for elderly users with features like voice-enabled chat, hobby circles, memory lane (VR experience), and simple games. Built using React, Supabase, and Tailwind CSS, with a focus on accessibility, design, and secure login.",
       technologies: "React, Supabase, Tailwind CSS",
-      link: "https://github.com/aryy8/silvercircle.in"
+      link: "https://github.com/aryy8/silvercircle.in",
+      image: "/silvercircle.png",
+      darkImage: "/silvercircle_dark.png"
     },
     {
       title: "Violence Detection Model",
       description: "Built a video classification model using a combination of CNN (MobileNet) and LSTM architectures in TensorFlow to detect violent behavior in video sequences. Focused on frame-wise feature extraction, temporal modeling, and dataset balancing. Implemented techniques like focal loss and class weighting to handle class imbalance and improve detection accuracy.",
       technologies: "TensorFlow, CNN, LSTM, Python",
-      link: "https://github.com/aryy8/violence-detection-model"
+      link: "https://github.com/aryy8/violence-detection-model",
+      image: "/violence.png",
+      darkImage: "/violence_dark.png"
     },
     {
       title: "Real-time Weapon Detection Model",
       description: "Implemented a real-time weapon detection system using YOLOv8, trained on a Hugging Face dataset, evaluated via OpenCV",
       technologies: "YOLOv8, Python, Roboflow, OpenCV",
-      link: "https://github.com/aryy8/weapon-detection-model"
+      link: "https://github.com/aryy8/weapon-detection-model",
+      image: "/weapon.jpeg",
+      darkImage: "/weapon.jpeg"
+    },
+    {
+      title: "UniPool-carpooling platform for MUJ folks",
+      description: "Built Frontend for Unipool, a student-centric carpooling platform designed to connect MUJ students for safe, convenient, and eco-friendly shared travel.",
+      technologies: "Html, css, js, react",
+      link: "https://github.com/aryy8/uniPool",
+      image: "/unipool.png",
+      darkImage: "/unipool.png"
     },
     {
       title: "AI agent - Kaggle notebook generator",
@@ -96,7 +120,7 @@ const Index = () => {
   return (
     <div className={`min-h-screen transition-all duration-500 ${
       isDark 
-        ? 'bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-black' 
+        ? 'bg-black text-white'
         : 'bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900'
     }`}>
       <DarkModeToggle isDark={isDark} toggle={toggleDarkMode} />
@@ -122,6 +146,9 @@ const Index = () => {
                   description={project.description}
                   technologies={project.technologies}
                   link={project.link}
+                  image={project.image}
+                  darkImage={project.darkImage}
+                  isDark={isDark}
                 />
               ))}
             </div>
