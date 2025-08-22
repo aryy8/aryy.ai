@@ -42,6 +42,14 @@ const Index = () => {
       darkImage: "/p2p_dark.png"
     },
     {
+      title: "UniWay – MUJ's Campus Navigation Platform",
+      description: "Developed UniWay, a campus navigation prototype for MUJ featuring navigation, interactive maps, smart search, student services, and future-ready extensions like AI chatbot, crowd heatmaps, volunteer support, API production, 360° street view.",
+      technologies: "React, OSRM, Leaflet, Google Maps Js API, Places API, Distance matrix API",
+      link: "https://github.com/aryy8/UniWay",
+      image: "/uniway.png",
+      darkImage: "/uniway.png"
+    },
+    {
       title: "SilverCircle – Social Networking Platform for Seniors",
       description: "Designed a user-friendly social platform for elderly users with features like voice-enabled chat, hobby circles, memory lane (VR experience), and simple games. Built using React, Supabase, and Tailwind CSS, with a focus on accessibility, design, and secure login.",
       technologies: "React, Supabase, Tailwind CSS",
@@ -105,7 +113,7 @@ const Index = () => {
     { company: "AI2 Research lab", role: "Research Intern (Jan 2025-Present)" },
     { company: "180 DC MUJ", role: "Joint Head R&D (May 2025-Present)" },
     { company: "Superteam", role: "Contributor (April 2025-Present)" },
-    { company: "GSSOC-2024", role: "Contributor (Oct 2024-Nov 2024)" }
+    { company: "GSSOC-2025", role: "Contributor (Present)" }
   ];
 
   const certifications = [
