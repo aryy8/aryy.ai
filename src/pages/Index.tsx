@@ -10,7 +10,7 @@ import ExperienceCard from '../components/ExperienceCard';
 import CertificationCard from '../components/CertificationCard';
 
 const Index = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
     if (isDark) {
@@ -44,7 +44,7 @@ const Index = () => {
     {
       title: "UniWay – MUJ's Campus Navigation Platform",
       description: "Developed UniWay, a campus navigation prototype for MUJ featuring navigation, interactive maps, smart search, student services, and future-ready extensions like AI chatbot, crowd heatmaps, volunteer support, API production, 360° street view.",
-      technologies: "React, OSRM, Leaflet, Google Maps Js API, Places API, Distance matrix API",
+      technologies: "React, OSRM, Leaflet, Google Maps Js API, Places API, Distance matrix API, Gemini API",
       link: "https://github.com/aryy8/UniWay",
       image: "/uniway.png",
       darkImage: "/uniway.png"
