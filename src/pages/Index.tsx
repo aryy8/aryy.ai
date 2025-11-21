@@ -26,6 +26,14 @@ const Index = () => {
 
   const projects = [
     {
+      title: "Roadeye – Road Safety Automated Audit System",
+      description: "A computer vision system for automated road infrastructure monitoring, safety assessment, and maintenance prioritization, trained on a self annotated dataset using YOLO model deployed via Roboflow's serverless API to detect 17 road safety classes, utilizing the 'detect-count-and-visualize' workflow for real-time processing and automated report generation.",
+      technologies: "YOLOv8, Roboflow, OpenCV, Python, pytorch",
+      link: "https://github.com/aryy8/road-safety",
+      image: "/roadeye.png",
+      darkImage: "/roadeye.png"
+    },
+    {
       title: "GeoVerse – Information Retrieval platform from a Knowledge Graph Based on Dynamic Web Portal Content",
       description: "GeoVerse is an AI-powered conversational assistant that transforms complex satellite data from the MOSDAC portal into instant, contextual answers using NLP , knowledge graphs, and semantic search.",
       technologies: "Neo4j, FastAPI, Langchain, Transformers, React, Node.js, AI/ML, LLMs",
